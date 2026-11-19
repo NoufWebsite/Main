@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعلمة نوف السبيعي | مساحة ابتكار - مصنع الألعاب</title>
+    <meta name="description" content="مصنع ألعاب تعليمي: أوريغامي وأحاجي وألعاب لوحية وإلكترونية، نتعلم فيه باللعب والابتكار.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="clouds" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="stars" aria-hidden="true"><b>★</b><b>✦</b><b>★</b><b>✦</b><b>★</b></div>
+
+    <div class="page" id="page">
+
+        <header class="hero">
+            <p class="hero-tag">مرحباً بكم في</p>
+            <h1 class="name">المعلمة نوف السبيعي</h1>
+            <p class="chips">
+                <span class="chip chip-yellow">مساحة ابتكار</span>
+                <span class="chip chip-white">مصنع الألعاب</span>
+            </p>
+            <p class="intro">
+                هنا نصنع الألعاب بأيدينا ونتعلم من خلالها. من طيّ الورق إلى حلّ الأحاجي، ومن اللوحات
+                والكرتون إلى الألعاب الإلكترونية، كل مشروع يدرّبنا على التفكير والإبداع والعمل
+                مع الآخرين. اختر أي مشروع لتشاهد صوره وفيديوهاته.
+            </p>
+            <div class="stats" id="stats">
+                <div class="stat"><strong id="statProjects">0</strong><span>مشاريع</span></div>
+                <div class="stat"><strong id="statImages">0</strong><span>صور</span></div>
+                <div class="stat"><strong id="statVideos">0</strong><span>فيديوهات</span></div>
+            </div>
+            <a class="scroll-hint" href="#games">شاهد الألعاب ↓</a>
+        </header>
+
+        <main>
+            <section class="block" id="games">
+                <h2 class="section-title">ألعابنا</h2>
+                <p class="section-sub">اضغط على أي بطاقة لتفتح معرض الصور والفيديوهات، واضغط على الصورة لتكبيرها.</p>
+                <div id="projects" class="projects-grid" aria-label="المشاريع"></div>
+            </section>
+
+            <section class="block" id="why">
+                <h2 class="section-title">لماذا نتعلم باللعب؟</h2>
+                <div class="features">
+                    <article class="feature f-sun">
+                        <span class="f-icon" aria-hidden="true">💡</span>
+                        <h3>نفكّر ونبتكر</h3>
+                        <p>كل لعبة تبدأ بفكرة، والطالبة تجرّب وتعدّل حتى تصل لأفضل نتيجة.</p>
+                    </article>
+                    <article class="feature f-coral">
+                        <span class="f-icon" aria-hidden="true">🤝</span>
+                        <h3>نعمل بروح الفريق</h3>
+                        <p>اللعب الجماعي يعلّمنا الحوار واحترام الدور والتعاون.</p>
+                    </article>
+                    <article class="feature f-mint">
+                        <span class="f-icon" aria-hidden="true">🧩</span>
+                        <h3>نحلّ المشكلات</h3>
+                        <p>الأحاجي والألعاب اللوحية تقوّي المنطق والصبر والتركيز.</p>
+                    </article>
+                    <article class="feature f-grape">
+                        <span class="f-icon" aria-hidden="true">🎨</span>
+                        <h3>نصنع بأيدينا</h3>
+                        <p>الورق والكرتون والألوان تتحول إلى ألعاب نفتخر بها.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>مساحة ابتكار · مصنع الألعاب</p>
+            <p class="foot-name">المعلمة نوف السبيعي</p>
+            <button class="to-top" id="toTop">العودة للأعلى ↑</button>
+        </footer>
+    </div>
+
+    <!-- اللوحة الجانبية -->
+    <div class="backdrop" id="backdrop"></div>
+    <aside class="side-panel" id="sidePanel" aria-hidden="true" aria-labelledby="panelTitle">
+        <div class="panel-head">
+            <div>
+                <h2 id="panelTitle"></h2>
+                <p id="panelDesc"></p>
+            </div>
+            <button class="close-btn" id="closeBtn" aria-label="إغلاق">✕</button>
+        </div>
+        <div class="panel-body" id="panelBody"></div>
+    </aside>
+
+    <!-- تكبير الصورة -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="عرض الصورة">
+        <button class="lb-btn lb-close" id="lbClose" aria-label="إغلاق">✕</button>
+        <button class="lb-btn lb-next" id="lbNext" aria-label="التالية">‹</button>
+        <button class="lb-btn lb-prev" id="lbPrev" aria-label="السابقة">›</button>
+        <img id="lbImg" alt="">
+        <p class="lb-count" id="lbCount"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
